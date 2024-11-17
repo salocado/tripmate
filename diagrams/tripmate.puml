@@ -1,0 +1,34 @@
+// Autor: Salome Schmied
+
+@startuml TRIPMATE
+
+class Trip {
+    - tripID: number
+    - country: Country
+    - cities: City[]
+    - startDate: Date
+    - endDate: Date
+    - guide: Guide
+}
+
+class City {
+    - name: string
+    - days: number
+}
+
+class Country {
+    - name: string
+    - language: string
+}
+
+class Guide {
+    - name: string
+    - language: string
+}
+
+Trip "1" o--> "1" Country : takes place in
+Trip "1" o--> "n" City : includes
+Trip "1" o-right-> "1" Guide : guided by
+City "n" -right-> "1" Country : part of
+
+@enduml

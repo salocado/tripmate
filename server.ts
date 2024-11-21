@@ -16,4 +16,6 @@ app.listen(port, () => {
 // middleware
 app.use(express.static('public'));
 app.use(express.json());
+
+// routes
 app.use('/api/trips', tripsRouter);

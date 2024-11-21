@@ -1,49 +1,49 @@
 // Author: Salome Schmied
 
-import express, {Express, Request, Response} from 'express';
+import express, {Express, Request, Response, Router} from 'express';
 import { Trip } from '../models/Trip';
 
 const trips: Trip[] = [];
 
-const router = express.Router();
+const router: Router = express.Router();
 
 // CRUD routes
 
-router.get('/', (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response): void => {
     // get all trips
     res.json(trips);
 });
 
-router.post('/', (req: Request, res: Response) => {
+router.post('/', (req: Request, res: Response): void => {
     // create a new trip
-    const country = req.body.country;
+    const country: string = req.body.country;
 
-    const trip = new Trip(country);
+    const trip: Trip = new Trip(country);
     trips.push(trip);
 
     res.status(201).send('Trip added successfully.');
 });
 
-router.put('/:id', (req: Request, res: Response) => {
+router.put('/:id', (req: Request, res: Response): void => {
     // update a trip
-    const id = parseInt(req.params.id);
-    const trip = trips.find(trip => trip.getTripID() === id);
+    const id: number = parseInt(req.params.id);
+    const trip: Trip | undefined = trips.find(trip => trip.getTripID() === id);
 
     if (!trip) {
         res.status(404).send('Trip not found');
     } else {
-        const { country } = req.body;
+        const country: string = req.body.country;
         trip.setCountry(country);
         res.send(`Updated trip with ID ${id}`);
     }
 });
 
-router.delete('/:id', (req: Request, res: Response) => {
+router.delete('/:id', (req: Request, res: Response): void => {
     // delete a trip
-    const id = parseInt(req.params.id);
-    const tripIndex = trips.findIndex(trip => trip.getTripID() === id);
+    const id: number = parseInt(req.params.id);
+    const tripIndex: number = trips.findIndex(trip => trip.getTripID() === id);
 
-    if (!tripIndex) {
+    if (tripIndex === -1) {
         res.status(404).send('Trip not found');
     } else {
         trips.splice(tripIndex, 1);

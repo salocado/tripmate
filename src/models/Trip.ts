@@ -1,7 +1,7 @@
 // Author: Salome Schmied
 
 export class Trip {
-    private static nextID = 1;
+    private static nextID: number = 1;
     private tripID: number;
     private country: string;
 

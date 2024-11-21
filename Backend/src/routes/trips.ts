@@ -1,10 +1,9 @@
 // Author: Salome Schmied
 
-import express, {Express, Request, Response, Router} from 'express';
+import express, { Express, Request, Response, Router } from 'express';
 import { Trip } from '../models/Trip';
 
 const trips: Trip[] = [];
-
 const router: Router = express.Router();
 
 // CRUD routes
@@ -17,10 +16,8 @@ router.get('/', (req: Request, res: Response): void => {
 router.post('/', (req: Request, res: Response): void => {
     // create a new trip
     const country: string = req.body.country;
-
     const trip: Trip = new Trip(country);
     trips.push(trip);
-
     res.status(201).send('Trip added successfully.');
 });
 

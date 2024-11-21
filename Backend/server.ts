@@ -3,6 +3,7 @@
 import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
 import tripsRouter from './src/routes/trips';
+import { allowedNodeEnvironmentFlags } from 'process';
 
 dotenv.config();
 

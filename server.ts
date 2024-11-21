@@ -2,6 +2,7 @@
 
 import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
+import tripsRouter from './src/routes/trips';
 
 dotenv.config();
 
@@ -12,5 +13,7 @@ app.listen(port, () => {
     console.log(`Server started at http://localhost:${port}`);
 });
 
+// middleware
 app.use(express.static('public'));
 app.use(express.json());
+app.use('/api/trips', tripsRouter);

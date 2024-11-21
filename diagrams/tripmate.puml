@@ -18,12 +18,11 @@ class City {
 
 class Country {
     - name: string
-    - language: string
+
 }
 
 class Guide {
     - name: string
-    - language: string
 }
 
 Trip "1" o--> "1" Country : takes place in

@@ -1,2 +1,115 @@
 /* Author: Salome Schmied */
 
+/* Einbindung der Schriftarten */
+@font-face {
+    font-family: 'Zain-Regular';
+    src: url('./fonts/Zain-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Zain-ExtraBold';
+    src: url('./fonts/Zain-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hind';
+    src: url('./fonts/Hind-Regular.ttf') format('truetype');
+}
+
+/* Allgemeine Einstellungen */
+body, html {
+    margin: 0; /* Entfernt Standardabstände um die Seite */
+    padding: 0; /* Entfernt Standardinnenabstände */
+    font-family: 'Hind', sans-serif; /* Standardschriftart für die gesamte Seite */
+}
+
+/* Header */
+header {
+    background-color: white; /* Weißer Hintergrund */
+    border-bottom: 2px solid #EDAE49; /* Gelbe Linie am unteren Rand */
+    display: flex; /* Flexbox zur einfachen Anordnung von Logo und Navigation */
+    justify-content: space-between; /* Maximiert den Abstand zwischen Logo und Navigation */
+    align-items: center; /* Zentriert Inhalte vertikal */
+    padding: 10px 40px; /* Abstand innen (oben/unten: 10px, links/rechts: 40px) */
+}
+
+/* Logo */
+#logo img {
+    width: 154.24px; /* Breite des Logos */
+    height: 41.44px; /* Höhe des Logos */
+}
+
+/* Navigation */
+#navigation ul {
+    list-style: none; /* Entfernt die Bullet Points bei der Navigation */
+    display: flex; /* Macht die Links horizontal */
+    gap: 20px; /* Abstand zwischen den einzelnen Links */
+    margin: 0; /* Entfernt Standardaußenabstände */
+    padding: 0; /* Entfernt Standardinnenabstände */
+}
+
+#navigation ul li a {
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: black; /* Standardfarbe der Links */
+    font-family: 'Zain-ExtraBold', sans-serif; /* Schriftart der Links */
+    font-size: 28px; /* Schriftgröße */
+}
+
+/* Hover-Effekt für Navigation */
+#navigation ul li a:hover {
+    color: #EDAE49; /* Ändert die Linkfarbe zu Gelb beim Hover */
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Erlaubt die absolute Positionierung der Kinder-Elemente */
+    width: 100%; /* Deckt die gesamte Breite des Bildschirms ab */
+    height: 100vh; /* Deckt die gesamte Höhe des Viewports ab */
+    background-color: #ffffff; /* Weißer Hintergrund als Platzhalter */
+    background-size: cover; /* Skaliert das Hintergrundbild proportional */
+    background-position: center; /* Zentriert das Hintergrundbild */
+    background-image: url('./images/hero_photo.png'); /* Hintergrundbild */
+}
+
+/* Text in der Hero Section */
+#hero h1 {
+    position: absolute; /* Absolute Positionierung innerhalb der Hero Section */
+    top: 300px; /* Abstand vom oberen Rand der Hero Section */
+    left: 200px; /* Abstand vom linken Rand der Hero Section */
+    width: 800px; /* Maximale Breite des Textblocks */
+    font-family: 'Zain-ExtraBold', sans-serif; /* Schriftart für den Titel */
+    font-size: 48px; /* Schriftgröße des Textes */
+    line-height: 38.4px; /* Höhe jeder Textzeile */
+    text-align: left; /* Linksbündige Ausrichtung */
+    color: white; /* Farbe des Textes */
+    margin: 0; /* Entfernt Standardaußenabstände */
+}
+
+#hero h1 .regular {
+    font-family: 'Zain-Regular', sans-serif; /* Schriftart für hervorgehobenen Text */
+    font-size: 48px; /* Schriftgröße bleibt gleich */
+    line-height: 38.4px; /* Zeilenhöhe bleibt gleich */
+}
+
+/* Button in der Hero Section */
+#start-planning {
+    position: absolute; /* Absolute Positionierung innerhalb der Hero Section */
+    top: 400px; /* Abstand vom oberen Rand der Hero Section */
+    left: 200px; /* Abstand vom linken Rand der Hero Section */
+    width: 250px; /* Festgelegte Breite des Buttons */
+    height: 40px; /* Festgelegte Höhe des Buttons */
+    border-radius: 45px; /* Rundet die Ecken des Buttons ab */
+    background-color: #EDAE49; /* Gelber Hintergrund */
+    color: black; /* Schwarzer Text */
+    font-family: 'Zain-Regular', sans-serif; /* Schriftart für den Button */
+    font-size: 28px; /* Schriftgröße */
+    text-align: center; /* Text im Button zentriert */
+    border: none; /* Kein Rahmen */
+    cursor: pointer; /* Zeigt, dass der Button interaktiv ist */
+    justify-content: center; /* Zentriert den Text horizontal */
+}
+
+/* Hover-Effekt für den Button */
+#start-planning:hover {
+    background-color: #df9216; /* Ändert den Hintergrund des Buttons bei Hover */
+}

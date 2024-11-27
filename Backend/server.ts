@@ -14,7 +14,7 @@ app.listen(port, (): void => {
 });
 
 // middleware
-app.use(express.static('public'));
+app.use(express.static('Backend/public'));
 app.use(express.json());
 
 // routes

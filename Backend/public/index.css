@@ -1,6 +1,6 @@
 /* Author: Salome Schmied */
 
-/* Einbindung der Schriftarten */
+/* Schriftarten */
 @font-face {
     font-family: 'Zain-Regular';
     src: url('./fonts/Zain-Regular.ttf') format('truetype');
@@ -18,104 +18,73 @@
 
 /* Allgemeine Einstellungen */
 body, html {
-    margin: 0; /* Entfernt Standardabstände um die Seite */
-    padding: 0; /* Entfernt Standardinnenabstände */
-    font-family: 'Hind', sans-serif; /* Standardschriftart für die gesamte Seite */
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
 }
 
 /* Header */
 header {
-    background-color: white; /* Weißer Hintergrund */
-    border-bottom: 2px solid #EDAE49; /* Gelbe Linie am unteren Rand */
-    display: flex; /* Flexbox zur einfachen Anordnung von Logo und Navigation */
-    justify-content: space-between; /* Maximiert den Abstand zwischen Logo und Navigation */
-    align-items: center; /* Zentriert Inhalte vertikal */
-    padding: 10px 40px; /* Abstand innen (oben/unten: 10px, links/rechts: 40px) */
+    background-color: white;
+    border-bottom: 2px solid #EDAE49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
 }
 
-/* Logo */
 #logo img {
-    width: 154.24px; /* Breite des Logos */
-    height: 41.44px; /* Höhe des Logos */
+    width: 152px;
+    height: 34px;
 }
 
 /* Navigation */
 #navigation ul {
-    list-style: none; /* Entfernt die Bullet Points bei der Navigation */
-    display: flex; /* Macht die Links horizontal */
-    gap: 20px; /* Abstand zwischen den einzelnen Links */
-    margin: 0; /* Entfernt Standardaußenabstände */
-    padding: 0; /* Entfernt Standardinnenabstände */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 #navigation ul li a {
-    text-decoration: none; /* Entfernt die Unterstreichung der Links */
-    color: black; /* Standardfarbe der Links */
-    font-family: 'Zain-ExtraBold', sans-serif; /* Schriftart der Links */
-    font-size: 28px; /* Schriftgröße */
+    text-decoration: none;
+    color: black;
+    font-family: 'Zain-ExtraBold', sans-serif;
+    font-size: 28px;
 }
 
-/* Hover-Effekt für Navigation */
 #navigation ul li a:hover {
-    color: #EDAE49; /* Ändert die Linkfarbe zu Gelb beim Hover */
+    color: #EDAE49;
 }
 
-/* Hero Section */
-#hero {
-    position: relative; /* Erlaubt die absolute Positionierung der Kinder-Elemente */
-    width: 100%; /* Deckt die gesamte Breite des Bildschirms ab */
-    height: 100vh; /* Deckt die gesamte Höhe des Viewports ab */
-    background-color: #ffffff; /* Weißer Hintergrund als Platzhalter */
-    background-size: cover; /* Skaliert das Hintergrundbild proportional */
-    background-position: center; /* Zentriert das Hintergrundbild */
-    background-image: url('./images/hero_photo.png'); /* Hintergrundbild */
+/* Generelle Überschriften */
+h1 {
+    font-family: 'Zain-ExtraBold', sans-serif;
+    font-size: 40px;
+    line-height: 0.8;
+    color: white;
+    margin: 0;
 }
 
-/* Text in der Hero Section */
-#hero h1 {
-    position: absolute; /* Absolute Positionierung innerhalb der Hero Section */
-    top: 300px; /* Abstand vom oberen Rand der Hero Section */
-    left: 200px; /* Abstand vom linken Rand der Hero Section */
-    width: 800px; /* Maximale Breite des Textblocks */
-    font-family: 'Zain-ExtraBold', sans-serif; /* Schriftart für den Titel */
-    font-size: 48px; /* Schriftgröße des Textes */
-    line-height: 38.4px; /* Höhe jeder Textzeile */
-    text-align: left; /* Linksbündige Ausrichtung */
-    color: white; /* Farbe des Textes */
-    margin: 0; /* Entfernt Standardaußenabstände */
-}
-
-#hero h1 .regular {
-    font-family: 'Zain-Regular', sans-serif; /* Schriftart für hervorgehobenen Text */
-    font-size: 48px; /* Schriftgröße bleibt gleich */
-    line-height: 38.4px; /* Zeilenhöhe bleibt gleich */
+h1 .regular {
+    font-family: 'Zain-Regular', sans-serif;
 }
 
 /* Allgemeine Button-Styles */
 .button {
-    padding: 10px 20px; /* Platz innen: 10px oben/unten, 20px links/rechts */
-    height: 40px; /* Feste Höhe */
-    border-radius: 45px; /* Einheitlich abgerundete Ecken */
-    background-color: #EDAE49; /* Standard-Hintergrundfarbe */
-    color: black; /* Standard-Textfarbe */
-    font-family: 'Zain-Regular', sans-serif; /* Einheitliche Schriftart */
-    font-size: 28px; /* Schriftgröße */
-    text-align: center; /* Text zentriert */
-    border: none; /* Kein Rahmen */
-    cursor: pointer; /* Hand-Cursor bei Hover */
-    display: inline-flex; /* Flexbox für Zentrierung */
-    align-items: center; /* Vertikale Zentrierung des Textes */
-    justify-content: center; /* Horizontale Zentrierung des Textes */
+    padding: 10px 20px;
+    border-radius: 45px;
+    background-color: #EDAE49;
+    color: black;
+    border: 0;
+    font-family: 'Zain-Regular', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* Hover-Effekt für alle Buttons */
 .button:hover {
-    background-color: #df9216; /* Leicht dunklerer Gelbton bei Hover */
-}
-
-/* Button in der Hero Section */
-#button-hero {
-    position: absolute; /* Absolute Positionierung innerhalb der Hero Section */
-    top: 400px; /* Abstand vom oberen Rand der Hero Section */
-    left: 200px; /* Abstand vom linken Rand der Hero Section */
+    background-color: #df9216;
 }

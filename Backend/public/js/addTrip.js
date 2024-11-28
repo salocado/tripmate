@@ -1,6 +1,7 @@
 // Author: Salome Schmied
 
-document.getElementById('form').addEventListener('click', () => {
+document.getElementById('form').addEventListener('submit', (event) => {
+    event.preventDefault();
     const country = document.getElementById('country').value;
     const startDate = document.getElementById('startDate').value;
     const endDate = document.getElementById('endDate').value;

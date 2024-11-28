@@ -8,16 +8,28 @@
     <title>All Trips</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/trips.js" defer></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <header>
-        <h1>Trips</h1>
+        <div id="logo">
+            <img src="./images/logo.svg" alt="Logo">
+        </div>
+        <nav id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trips.html">My Trips</a></li>
+                <li><a href="#company">Company</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div id="tripsList"> </div>
-        <button id="loadTrips">Load Trips</button>
+    <main style="position: absolute; left: 40px">
+        <div id="tripsList" style="position: relative; top: 20px"> 
+            <p>Loading trips...</p>
+        </div>
     </main>
 </body>
 

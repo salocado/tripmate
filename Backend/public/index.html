@@ -10,31 +10,28 @@
 </head>
 
 <body>
-    <!-- Header-Bereich -->
     <header>
         <div id="logo">
-            <!-- Platzhalter für das Logo -->
             <img src="./images/logo.svg" alt="Logo">
         </div>
         <nav id="navigation">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#trips">My Trips</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="trips.html">My Trips</a></li>
                 <li><a href="#company">Company</a></li>
                 <li><a href="#blog">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hauptinhalt -->
-    <main>
-        <section id="hero">
-            <h1>
-                Your trip begins here!
-                <span class="regular">Begin planning today and discover the joy of seamless travel.</span>
-            </h1>
-            <button class="button" id="button-hero">Start Planning</button>
-        </section>
+    <main style="width: 100%; height: 100vh; background-image: url('./images/hero_photo.png'); background-size: cover; background-position: center;">
+        <h1 style="position: absolute; top: 400px; left: 200px; right: 200px">
+            Your trip begins here!
+            <span class="regular">Begin planning today and discover the joy of seamless travel.</span>
+        </h1>
+        <a href="addTrip.html" class="button" style="position: absolute; top: 500px; left: 200px;">
+            Start Planning
+        </a>
     </main>
 </body>
 </html>

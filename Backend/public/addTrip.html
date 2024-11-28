@@ -1,0 +1,34 @@
+<!-- Author: Salome Schmied -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Trip</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/addTrip.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Add Trip</h1>
+    </header>
+
+    <main>
+        <form id="form">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country"/>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate"/>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate"/>
+
+            <button type="button" id="add-trip">Add Trip</button>
+        </form>
+        <div id="response-message"></div>
+    </main>
+</body>
+
+</html>

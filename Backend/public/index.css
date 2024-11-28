@@ -91,25 +91,31 @@ header {
     line-height: 38.4px; /* Zeilenhöhe bleibt gleich */
 }
 
+/* Allgemeine Button-Styles */
+.button {
+    padding: 10px 20px; /* Platz innen: 10px oben/unten, 20px links/rechts */
+    height: 40px; /* Feste Höhe */
+    border-radius: 45px; /* Einheitlich abgerundete Ecken */
+    background-color: #EDAE49; /* Standard-Hintergrundfarbe */
+    color: black; /* Standard-Textfarbe */
+    font-family: 'Zain-Regular', sans-serif; /* Einheitliche Schriftart */
+    font-size: 28px; /* Schriftgröße */
+    text-align: center; /* Text zentriert */
+    border: none; /* Kein Rahmen */
+    cursor: pointer; /* Hand-Cursor bei Hover */
+    display: inline-flex; /* Flexbox für Zentrierung */
+    align-items: center; /* Vertikale Zentrierung des Textes */
+    justify-content: center; /* Horizontale Zentrierung des Textes */
+}
+
+/* Hover-Effekt für alle Buttons */
+.button:hover {
+    background-color: #df9216; /* Leicht dunklerer Gelbton bei Hover */
+}
+
 /* Button in der Hero Section */
-#start-planning {
+#button-hero {
     position: absolute; /* Absolute Positionierung innerhalb der Hero Section */
     top: 400px; /* Abstand vom oberen Rand der Hero Section */
     left: 200px; /* Abstand vom linken Rand der Hero Section */
-    width: 250px; /* Festgelegte Breite des Buttons */
-    height: 40px; /* Festgelegte Höhe des Buttons */
-    border-radius: 45px; /* Rundet die Ecken des Buttons ab */
-    background-color: #EDAE49; /* Gelber Hintergrund */
-    color: black; /* Schwarzer Text */
-    font-family: 'Zain-Regular', sans-serif; /* Schriftart für den Button */
-    font-size: 28px; /* Schriftgröße */
-    text-align: center; /* Text im Button zentriert */
-    border: none; /* Kein Rahmen */
-    cursor: pointer; /* Zeigt, dass der Button interaktiv ist */
-    justify-content: center; /* Zentriert den Text horizontal */
-}
-
-/* Hover-Effekt für den Button */
-#start-planning:hover {
-    background-color: #df9216; /* Ändert den Hintergrund des Buttons bei Hover */
 }

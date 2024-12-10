@@ -2,6 +2,7 @@
 
 import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import tripRouter from './src/routes/tripRoutes';
 
 dotenv.config();
@@ -14,6 +15,7 @@ app.listen(port, (): void => {
 });
 
 // middleware
+app.use(cors());
 app.use(express.static('public'));
 app.use(express.json());
 

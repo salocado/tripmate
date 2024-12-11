@@ -1,0 +1,14 @@
+.conceptSection {
+    background-color: #00798C;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.conceptSteps {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}

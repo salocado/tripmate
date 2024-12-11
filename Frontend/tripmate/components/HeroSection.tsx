@@ -1,10 +1,10 @@
-import styles from './Hero.module.css';
+import styles from './HeroSection.module.css';
 import Button from './Button';
 
-const Hero = () => (
-    <section className={styles.hero}>
+const HeroSection = () => (
+    <section className={styles.heroSection}>
         <div className={styles.content}>
-            <h1 className={styles.title}>
+            <h1>
                 Your trip begins here! Begin planning today and discover the joy of seamless travel.
             </h1>
             <p></p>
@@ -13,4 +13,4 @@ const Hero = () => (
     </section>
 );
 
-export default Hero;
+export default HeroSection;

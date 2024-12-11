@@ -1,12 +1,17 @@
 import NavigationBar from '../components/NavigationBar';
-import Hero from '../components/Hero';
+import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer';
+import ConceptSection from '../components/ConceptSection';
+import styles from './layout.module.css';
 
 export default function Home() {
     return (
         <div>
             <NavigationBar />
-            <Hero />
+            <HeroSection />
+            <div className={styles.container}>
+                <ConceptSection />
+            </div>
             <Footer />
         </div>
     );

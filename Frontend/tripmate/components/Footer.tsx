@@ -2,8 +2,8 @@ import styles from './Footer.module.css';
 import Image from 'next/image';
 
 const Footer = () => (
-    <footer className={styles.footer}>
-        <div className={styles.logoContainer}>
+    <footer className={styles.footerSection}>
+        <div>
             <Image 
                 src="logo.svg" 
                 alt="Logo"

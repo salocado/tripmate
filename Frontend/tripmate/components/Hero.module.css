@@ -1,0 +1,10 @@
+.hero {
+    background: url('/images/hero-bg.png') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 200px;
+    display: flex;
+}
+
+.content {
+    max-width: 800px;
+}

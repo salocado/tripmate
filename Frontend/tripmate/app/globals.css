@@ -1,42 +1,72 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/Zain-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  font-family: 'Hind', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
   margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Zain', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Zain', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: 'Zain', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  color: #EDAE49;
 }

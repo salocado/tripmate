@@ -1,0 +1,22 @@
+.footer {
+    background-color: #99C9D1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.logoContainer {
+    margin-bottom: 40px;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.content {
+    max-width: 200px;
+}

@@ -1,5 +1,5 @@
 import styles from './HeroSection.module.css';
-import Button from './Button';
+import Button from '../Button/Button';
 
 const HeroSection = () => (
     <section className={styles.container}>

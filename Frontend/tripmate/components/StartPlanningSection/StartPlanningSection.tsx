@@ -1,10 +1,10 @@
 import styles from './StartPlanningSection.module.css';
-import DestinationDropdown from './DestinationDropdown';
-import Button from './Button';
+import DestinationDropdown from '../DestinationDropdown/DestinationDropdown';
+import Button from '../Button/Button';
 
 const StartPlanningSection = () => (
     <section className={styles.container}>
-        <h1>Start planning your trip!</h1>
+        <h1>Start planning your trip</h1>
         <p>Select your destination and start planning your trip today.</p>
         <ul>
             <li>Personalized trip itineraries for every traveler</li>

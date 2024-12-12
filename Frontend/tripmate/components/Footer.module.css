@@ -1,10 +1,11 @@
-.footerSection {
+.container {
     background-color: #99C9D1;
     padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
+    margin: 20px 0 0 0;
 }
 
 .contentContainer {

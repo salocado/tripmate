@@ -3,9 +3,9 @@ import ConceptStep from './ConceptStep';
 
 export default function ConceptSection() {
     return (
-        <div className={styles.conceptSection}>
+        <section className={styles.container}>
             <h1>Our Concept</h1>
-            <div className={styles.conceptSteps}>
+            <div className={styles.stepsContainer}>
                 <ConceptStep
                     title="Step 1"
                     description="Select the country for your trip"
@@ -23,6 +23,6 @@ export default function ConceptSection() {
                     description="Head off to your exciting trip"
                 />
             </div>
-        </div>
+        </section>
     );
 }

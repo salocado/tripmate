@@ -13,6 +13,13 @@
 }
 
 @font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Zain';
   src: url('/fonts/Zain-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -28,7 +35,7 @@
 
 body {
   font-family: 'Hind', sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 1;
   margin: 0;
@@ -40,13 +47,13 @@ h1 {
   font-weight: bold;
   font-size: 48px;
   line-height: 1;
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 0;
 }
 
 h2 {
   font-family: 'Zain', sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 48px;
   line-height: 1;
   margin: 0;
@@ -68,4 +75,8 @@ a {
 
 a:hover {
   color: #EDAE49;
+}
+
+ul {
+  margin-bottom: 40px;
 }

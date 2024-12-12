@@ -1,7 +1,12 @@
 import styles from './Button.module.css';
 
-const Button = ({ children }: { children: React.ReactNode }) => (
-    <button className={styles.button}>
+type ButtonProps = {
+    children: React.ReactNode;
+    onClick?: () => void;
+};
+
+const Button = ({ children, onClick }: ButtonProps) => (
+    <button className={styles.button} onClick={onClick}>
         {children}
     </button>
 );

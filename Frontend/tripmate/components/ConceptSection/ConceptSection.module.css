@@ -2,11 +2,11 @@
 
 .container {
     background-color: #00798C;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     text-align: center;
     padding: 40px;
-    margin: 20px;
+    margin: 20px 20px;
 }
 
 .stepsContainer {

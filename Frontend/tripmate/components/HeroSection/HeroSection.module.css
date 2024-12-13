@@ -1,12 +1,26 @@
 /* Author: Salome Schmied */
 
 .container {
-    background: url('/images/hero-bg.jpg') no-repeat center center/cover;
-    color: black;
-    padding: 200px;
+    position: relative;
+    height: calc(100vh - 80px);
     display: flex;
+    align-items: center;
+    padding: 0 40px 0 200px;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .content {
+    z-index: 1;
     max-width: 800px;
+}
+
+.image {
+    object-fit: cover;
 }

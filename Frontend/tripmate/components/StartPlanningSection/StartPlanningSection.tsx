@@ -1,7 +1,6 @@
 // Author: Salome Schmied
 
 import styles from './StartPlanningSection.module.css';
-import DestinationDropdown from '@/components/DestinationDropdown/DestinationDropdown';
 import Button from '@/components/Button/Button';
 
 const StartPlanningSection = () => (
@@ -13,7 +12,6 @@ const StartPlanningSection = () => (
             <li>Expert guidance and local insights</li>
             <li>Seamless planning from start to finish</li>
         </ul>
-        <DestinationDropdown />
         <Button>Start Planning</Button>
     </section>
 );

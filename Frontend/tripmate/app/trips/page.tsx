@@ -1,4 +1,6 @@
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
+// Author: Salome Schmied
+
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
 
 export default function Trips() {
     return (

@@ -1,3 +1,5 @@
+// Author: Salome Schmied
+
 import styles from './Button.module.css';
 
 type ButtonProps = {

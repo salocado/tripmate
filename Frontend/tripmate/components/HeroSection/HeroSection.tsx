@@ -1,5 +1,7 @@
+// Author: Salome Schmied
+
 import styles from './HeroSection.module.css';
-import Button from '../Button/Button';
+import Button from '@/components/Button/Button';
 
 const HeroSection = () => (
     <section className={styles.container}>

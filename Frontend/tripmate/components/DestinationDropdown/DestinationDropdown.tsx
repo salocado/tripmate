@@ -1,7 +1,9 @@
+// Author: Salome Schmied
+
 'use client';
 
-import { useState } from 'react';
 import styles from './DestinationDropdown.module.css';
+import { useState } from 'react';
 
 const destinations = ['Austria', 'Norway', 'Italy', 'Germany', 'Croatia'];
 
@@ -15,12 +17,12 @@ const DestinationDropdown = () => {
     return (
         <div>
             <select
-                id="destination"
+                id='destination'
                 value={selected}
                 onChange={handleChange}
                 className={styles.dropdown}
             >
-                <option value="">
+                <option value=''>
                     Choose a destination
                 </option>
                 {destinations.map((destination) => (

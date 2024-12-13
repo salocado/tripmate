@@ -1,6 +1,8 @@
+// Author: Salome Schmied
+
 import styles from './StartPlanningSection.module.css';
-import DestinationDropdown from '../DestinationDropdown/DestinationDropdown';
-import Button from '../Button/Button';
+import DestinationDropdown from '@/components/DestinationDropdown/DestinationDropdown';
+import Button from '@/components/Button/Button';
 
 const StartPlanningSection = () => (
     <section className={styles.container}>

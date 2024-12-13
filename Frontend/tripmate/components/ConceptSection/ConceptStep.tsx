@@ -1,3 +1,5 @@
+// Author: Salome Schmied
+
 import styles from './conceptStep.module.css';
 
 export default function ConceptStep({ title, description }: { title: string; description: string }) {

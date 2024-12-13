@@ -1,0 +1,13 @@
+/* Author: Salome Schmied */
+
+.card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+    margin: 10px 40px 10px 40px;
+}
+
+.tripId {
+    color: #00798C;
+    font-size: 16px;
+}

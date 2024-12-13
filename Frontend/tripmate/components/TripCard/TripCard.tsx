@@ -1,5 +1,7 @@
 // Author: Salome Schmied
 
+import styles from './TripCard.module.css';
+
 interface TripCardProps {
     tripID: number;
     country: string;
@@ -14,11 +16,10 @@ const TripCard = ({ tripID, country, startDate, endDate }: TripCardProps) => {
     };
 
     return(
-        <div>
-            <p>ID: {tripID}</p>
-            <p>Trip to {country}</p>
-            <p>Start Date: {formatDate(startDate)}</p>
-            <p>End Date: {formatDate(endDate)}</p>
+        <div className={styles.card}>
+            <p className={styles.tripId}>Trip ID: {tripID}</p>
+            <h3>Trip to {country}</h3>
+            <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
         </div>
     );
 };

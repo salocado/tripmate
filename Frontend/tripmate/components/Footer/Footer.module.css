@@ -2,7 +2,7 @@
 
 .container {
     background-color: #99C9D1;
-    padding: 0 40px;
+    padding: 0 40px 10px 40px;
     height: 80px;
     display: flex;
     flex-direction: column;

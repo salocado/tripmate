@@ -4,8 +4,10 @@
 
 import { useState, useEffect } from 'react';
 import TripCard from '@/components/TripCard/TripCard';
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import { fetchTrips } from '@/services/tripServices';
 import Trip from '@/types/Trip';
+import Footer from '@/components/Footer/Footer';
 
 
 const Trips = () => {
@@ -24,7 +26,7 @@ const Trips = () => {
 
     return (
         <div>
-            <h1>My Trips</h1>
+            <NavigationBar />
             <div>
                 {trips.map((trip) => (
                     <TripCard
@@ -36,6 +38,7 @@ const Trips = () => {
                     />
                 ))}
             </div>
+            <Footer />
         </div>
     );
 };

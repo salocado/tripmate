@@ -17,7 +17,7 @@ const NavigationBar = () => (
         <h3><ul className={styles.navLinks}>
             <li><Link href='/'>Home</Link></li>
             <li><Link href='/trips'>My Trips</Link></li>
-            <li><Link href='/'>Blog</Link></li>
+            <li><Link href='/add-trip'>Add Trip</Link></li>
         </ul></h3>
     </nav>
 );

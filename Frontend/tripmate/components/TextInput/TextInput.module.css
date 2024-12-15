@@ -1,0 +1,13 @@
+/* Author: Salome Schmied */
+
+.input {
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    height: 40px;
+    width: 250px;
+    padding: 0px 10px;
+    border: 2px solid #00798C;
+    border-radius: 5px;
+    margin: 10px 0;
+}

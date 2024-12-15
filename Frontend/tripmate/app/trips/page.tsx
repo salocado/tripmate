@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import TripCard from '@/components/TripCard/TripCard';
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import { fetchTrips } from '@/services/tripServices';
-import Trip from '@/types/Trip';
+import { Trip } from '@/types/tripTypes';
 import Footer from '@/components/Footer/Footer';
 
 

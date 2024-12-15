@@ -16,10 +16,12 @@ const TripCard = ({ tripID, country, startDate, endDate }: TripCardProps) => {
     };
 
     return(
-        <div className={styles.card}>
-            <p className={styles.tripId}>Trip ID: {tripID}</p>
-            <h3>Trip to {country}</h3>
-            <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
+        <div className={styles.container}>
+            <div className={styles.card}>
+                <p className={styles.tripId}>Trip ID: {tripID}</p>
+                <h3>Trip to {country}</h3>
+                <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
+            </div>
         </div>
     );
 };

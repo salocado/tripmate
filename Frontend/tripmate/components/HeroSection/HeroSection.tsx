@@ -8,7 +8,7 @@ const HeroSection = () => (
     <section className={styles.container}>
         <div className={styles.background}>
             <Image
-                src='/images/heroBG.jpg'
+                src='/images/heroSectionBG.jpg'
                 alt='Hero Background'
                 fill
                 className={styles.image}
@@ -18,7 +18,7 @@ const HeroSection = () => (
             <h1>
                 Your trip begins here! Begin planning today and discover the joy of seamless travel.
             </h1>
-            <Button>Start Planning</Button>
+            <Button to='/add-trip'>Start Planning</Button>
         </div>
     </section>
 );

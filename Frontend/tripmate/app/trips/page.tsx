@@ -7,8 +7,6 @@ import TripCard from '@/components/TripCard/TripCard';
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import { fetchTrips } from '@/services/tripServices';
 import { Trip } from '@/types/tripTypes';
-import Footer from '@/components/Footer/Footer';
-
 
 const Trips = () => {
     const [trips, setTrips] = useState<Trip[]>([]);
@@ -27,7 +25,7 @@ const Trips = () => {
     return (
         <div>
             <NavigationBar />
-            <div>
+            <div style={{ margin: '100px 0 20px 0' }}>
                 {trips.map((trip) => (
                     <TripCard
                         key={trip.tripID}
@@ -38,7 +36,6 @@ const Trips = () => {
                     />
                 ))}
             </div>
-            <Footer />
         </div>
     );
 };

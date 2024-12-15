@@ -2,7 +2,7 @@
 
 import styles from './TripCard.module.css';
 
-interface TripCardProps {
+type TripCardProps = {
     tripID: number;
     country: string;
     startDate: string;

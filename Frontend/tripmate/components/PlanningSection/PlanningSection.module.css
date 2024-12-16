@@ -1,3 +1,5 @@
+/* Author: Salome Schmied */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -21,10 +23,11 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Abstände zwischen Eingabeelementen */
+    gap: 20px;
     background-color: white;
-    border-radius: 10px; /* Abgerundete Ecken */
-    width: 50%; /* Breite */
-    padding: 60px; /* Innenabstand */
-    z-index: 1; /* Über dem Hintergrund */
+    border-radius: 10px;
+    width: 50vw;
+    height: auto;
+    padding: 60px;
+    z-index: 1;
 }

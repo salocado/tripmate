@@ -45,30 +45,31 @@ body {
   background-color: white;
 }
 
-h1 {
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3 {
   font-family: 'Zain', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
   font-weight: bold;
   font-size: 48px;
   line-height: 1;
-  margin: 0 0 20px 0;
-  padding: 0;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-family: 'Zain', sans-serif;
   font-weight: normal;
   font-size: 48px;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
 }
 
 h3 {
-  font-family: 'Zain', sans-serif;
   font-weight: bold;
   font-size: 24px;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -78,8 +79,4 @@ a {
 
 a:hover {
   color: #EDAE49;
-}
-
-ul {
-  margin-bottom: 40px;
 }

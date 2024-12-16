@@ -14,7 +14,6 @@ const AddTrip = () => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-
         try {
             await postTrip({ country, startDate, endDate });
             alert('Trip added successfully.');

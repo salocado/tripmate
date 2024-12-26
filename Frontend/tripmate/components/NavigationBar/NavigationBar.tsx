@@ -8,7 +8,7 @@ const NavigationBar = () => (
     <nav className={styles.navbar}>
         <div>
             <Image 
-                src='logo.svg'
+                src='/images/logo.svg'
                 alt='Logo'
                 width={140}
                 height={40}

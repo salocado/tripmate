@@ -10,7 +10,7 @@ import NavigationBar from '@/components/NavigationBar/NavigationBar';
 
 const AddTrip = () => {
     const searchParams = useSearchParams();
-    const tripID = searchParams.get('tripID'); // tripID aus der URL auslesen
+    const tripID = searchParams.get('tripID');
 
     const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState('');
@@ -42,10 +42,7 @@ const AddTrip = () => {
                 await postTrip({ country, startDate, endDate });
                 alert('Trip added successfully.');
             }
-            // reset form
-            setCountry('');
-            setStartDate('');
-            setEndDate('');
+            window.location.href = '/trips';
         } catch (error) {
             console.error('Error:', error);
             alert('Failed to save trip.');
@@ -63,7 +60,7 @@ const AddTrip = () => {
                 endDate={endDate}
                 setEndDate={setEndDate}
                 handleSubmit={handleSubmit}
-                buttonLabel={isEditMode ? 'Save Trip' : 'Add Trip'}
+                buttonLabel={isEditMode ? 'Save updated Trip' : 'Add Trip'}
             />
         </div>
     );

@@ -9,9 +9,10 @@ type TripDetailCardProps = {
     startDate: string;
     endDate: string;
     onDelete: () => void;
+    onEdit: () => void;
 }
 
-const TripDetailCard = ({ tripID, country, startDate, endDate, onDelete }: TripDetailCardProps) => {
+const TripDetailCard = ({ tripID, country, startDate, endDate, onDelete, onEdit }: TripDetailCardProps) => {
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return date.toLocaleDateString();
@@ -26,7 +27,7 @@ const TripDetailCard = ({ tripID, country, startDate, endDate, onDelete }: TripD
                     <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
                 </div>
                 <div className={styles.buttons}>
-                    <Button>Edit Trip</Button>
+                    <Button onClick={onEdit}>Edit Trip</Button>
                     <Button onClick={onDelete}>Delete Trip</Button>
                 </div>
             </div>

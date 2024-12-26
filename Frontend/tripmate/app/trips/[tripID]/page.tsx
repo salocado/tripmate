@@ -43,6 +43,16 @@ const TripDetails = () => {
         }
     };
 
+    const handleEdit = () => {
+        const params = new URLSearchParams({
+            tripID: trip.tripID.toString(),
+            country: trip.country,
+            startDate: trip.startDate,
+            endDate: trip.endDate,
+        });
+        window.location.href = `/add-trip?${params.toString()}`;
+    };
+
     return (
         <div>
             <NavigationBar />
@@ -53,7 +63,8 @@ const TripDetails = () => {
                     country={trip.country}
                     startDate={trip.startDate}
                     endDate={trip.endDate}
-                    onDelete={handleDelete} // Löschen-Funktion weitergeben
+                    onDelete={handleDelete}
+                    onEdit={handleEdit}
                 />
             </div>
         </div>

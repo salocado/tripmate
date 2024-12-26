@@ -13,13 +13,15 @@ type PlanningSectionProps = {
     endDate: string;
     setEndDate: (value: string) => void;
     handleSubmit: (event: React.FormEvent) => void;
+    buttonLabel: string;
 };
 
 const PlanningSection = ({
     country, setCountry,
     startDate, setStartDate,
     endDate, setEndDate,
-    handleSubmit
+    handleSubmit,
+    buttonLabel
 }: PlanningSectionProps) => {
     return (
         <section className={styles.container}>
@@ -50,7 +52,7 @@ const PlanningSection = ({
                     />
                 </div>
                 <div style={{ textAlign: 'right' }}>
-                    <Button type="submit">Add Trip</Button>
+                    <Button type="submit">{buttonLabel}</Button>
                 </div>
             </form>
         </section>

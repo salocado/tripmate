@@ -24,3 +24,7 @@ export const postTrip = async ( { country, startDate, endDate }: NewTrip ): Prom
 export const deleteTrip = async (tripID: number): Promise<void> => {
     await axios.delete(`http://localhost:8085/api/trip/${tripID}`);
 }
+
+export const updateTrip = async (tripID: number, updatedTrip: { country: string; startDate: string; endDate: string }): Promise<void> => {
+    await axios.put(`http://localhost:8085/api/trip/${tripID}`, updatedTrip);
+};

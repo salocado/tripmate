@@ -3,8 +3,10 @@
 import axios from 'axios';
 import { Trip, NewTrip } from '@/types/tripTypes';
 
+const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 export const fetchTrips = async (): Promise<Trip[]> => {
-    const response = await axios.get('http://localhost:8085/api/trip');
+    const response = await axios.get(`${backendUrl}/api/trip`);
     return response.data;
 };
 
@@ -18,13 +20,13 @@ export const fetchTrip = async (tripID: number): Promise<Trip> => {
 };
 
 export const postTrip = async ( { country, startDate, endDate }: NewTrip ): Promise<void> => {
-    await axios.post('http://localhost:8085/api/trip', { country, startDate, endDate });
+    await axios.post(`${backendUrl}/api/trip`, { country, startDate, endDate });
 }
 
 export const deleteTrip = async (tripID: number): Promise<void> => {
-    await axios.delete(`http://localhost:8085/api/trip/${tripID}`);
+    await axios.delete(`${backendUrl}/api/trip/${tripID}`);
 }
 
 export const updateTrip = async (tripID: number, updatedTrip: { country: string; startDate: string; endDate: string }): Promise<void> => {
-    await axios.put(`http://localhost:8085/api/trip/${tripID}`, updatedTrip);
+    await axios.put(`${backendUrl}/api/trip/${tripID}`, updatedTrip);
 };

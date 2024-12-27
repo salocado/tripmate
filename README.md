@@ -8,15 +8,19 @@ This project requires `.env` files located in the **root** of both the **Backend
 
 Define the backend server port:
 
-```PORT=8085```
+``` plaintext
+PORT=8085
+```
 
 ### Frontend: .env
 
 Define the backend URL:
 
-```NEXT_PUBLIC_BACKEND_URL=http://localhost:8085```
+``` plaintext
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8085
+```
 
 ### Notes
-*Ensure both files are in the correct directories.
-*Use the same port in both files for communication.
-*The Frontend runs on its own port (default: 3000).
+* Ensure both files are in the correct directories.
+* Use the same port in both files for communication.
+* The Frontend runs on its own port (default: 3000).

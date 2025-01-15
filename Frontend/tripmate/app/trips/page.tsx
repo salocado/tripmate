@@ -28,8 +28,8 @@ const Trips = () => {
             <div style={{ margin: '100px 0 20px 0' }}>
                 {trips.map((trip) => (
                     <TripCard
-                        key={trip.tripID}
-                        tripID={trip.tripID}
+                        key={trip._id}
+                        _id={trip._id}
                         country={trip.country}
                         startDate={trip.startDate}
                         endDate={trip.endDate}

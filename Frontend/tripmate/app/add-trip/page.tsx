@@ -10,7 +10,7 @@ import NavigationBar from '@/components/NavigationBar/NavigationBar';
 
 const AddTrip = () => {
     const searchParams = useSearchParams();
-    const tripID = searchParams.get('tripID');
+    const _id = searchParams.get('_id');
 
     const [country, setCountry] = useState('');
     const [startDate, setStartDate] = useState('');
@@ -18,7 +18,7 @@ const AddTrip = () => {
     const [isEditMode, setIsEditMode] = useState(false);
 
     useEffect(() => {
-        if (tripID) {
+        if (_id) {
             setIsEditMode(true);
             const countryParam = searchParams.get('country');
             const startDateParam = searchParams.get('startDate');
@@ -28,14 +28,14 @@ const AddTrip = () => {
             setStartDate(startDateParam ? new Date(startDateParam).toISOString().split('T')[0] : '');
             setEndDate(endDateParam ? new Date(endDateParam).toISOString().split('T')[0] : '');
         }
-    }, [tripID, searchParams]);
+    }, [_id, searchParams]);
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         try {
-            if (isEditMode && tripID) {
+            if (isEditMode && _id) {
                 // edit trip
-                await updateTrip(Number(tripID), { country, startDate, endDate });
+                await updateTrip(String(_id), { country, startDate, endDate });
                 alert('Trip updated successfully.');
             } else {
                 // add trip

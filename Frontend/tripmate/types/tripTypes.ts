@@ -1,7 +1,7 @@
 // Author: Salome Schmied
 
 export interface Trip {
-    tripID: number;
+    _id: string;
     country: string;
     startDate: string;
     endDate: string;

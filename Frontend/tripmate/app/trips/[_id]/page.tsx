@@ -11,12 +11,12 @@ import TripDetailCard from '@/components/TripDetailCard/TripDetailCard';
 import NavigationBar from '@/components/NavigationBar/NavigationBar';
 
 const TripDetails = () => {
-    const { tripID } = useParams();
+    const { _id } = useParams();
     const [trip, setTrip] = useState<Trip | null>(null);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchTrip(Number(tripID))
+        fetchTrip(String(_id))
             .then(response => {
                 setTrip(response);
             })
@@ -24,7 +24,7 @@ const TripDetails = () => {
                 console.error('Error:', error);
                 setError('Failed to load trip.');
             });
-    }, [tripID]);
+    }, [_id]);
 
     if (!trip) {
         return <p>Loading...</p>;
@@ -33,7 +33,7 @@ const TripDetails = () => {
     const handleDelete = async () => {
         if (confirm('Are you sure you want to delete this trip?')) {
             try {
-                await deleteTrip(Number(tripID));
+                await deleteTrip(String(_id));
                 alert('Trip successfully deleted.');
                 window.location.href = '/trips';
             } catch (error) {
@@ -45,7 +45,7 @@ const TripDetails = () => {
 
     const handleEdit = () => {
         const params = new URLSearchParams({
-            tripID: trip.tripID.toString(),
+            _id: trip._id,
             country: trip.country,
             startDate: trip.startDate,
             endDate: trip.endDate,
@@ -58,8 +58,8 @@ const TripDetails = () => {
             <NavigationBar />
             <div className={styles.container}>
                 <TripDetailCard
-                    key={trip.tripID}
-                    tripID={trip.tripID}
+                    key={trip._id}
+                    _id={trip._id}
                     country={trip.country}
                     startDate={trip.startDate}
                     endDate={trip.endDate}

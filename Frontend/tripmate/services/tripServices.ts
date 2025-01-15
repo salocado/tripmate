@@ -10,9 +10,9 @@ export const fetchTrips = async (): Promise<Trip[]> => {
     return response.data;
 };
 
-export const fetchTrip = async (tripID: number): Promise<Trip> => {
+export const fetchTrip = async (_id: string): Promise<Trip> => {
     const trips = await fetchTrips();
-    const foundTrip = trips.find((trip) => trip.tripID === tripID);
+    const foundTrip = trips.find((trip) => trip._id === _id);
     if (!foundTrip) {
         throw new Error('Trip not found.');
     }
@@ -23,10 +23,10 @@ export const postTrip = async ( { country, startDate, endDate }: NewTrip ): Prom
     await axios.post(`${backendUrl}/api/trip`, { country, startDate, endDate });
 }
 
-export const deleteTrip = async (tripID: number): Promise<void> => {
-    await axios.delete(`${backendUrl}/api/trip/${tripID}`);
+export const deleteTrip = async (_id: string): Promise<void> => {
+    await axios.delete(`${backendUrl}/api/trip/${_id}`);
 }
 
-export const updateTrip = async (tripID: number, updatedTrip: { country: string; startDate: string; endDate: string }): Promise<void> => {
-    await axios.put(`${backendUrl}/api/trip/${tripID}`, updatedTrip);
+export const updateTrip = async (_id: string, updatedTrip: { country: string; startDate: string; endDate: string }): Promise<void> => {
+    await axios.put(`${backendUrl}/api/trip/${_id}`, updatedTrip);
 };

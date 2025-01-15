@@ -4,7 +4,7 @@ import styles from './TripDetailCard.module.css';
 import Button from '@/components/Button/Button';
 
 type TripDetailCardProps = {
-    tripID: number;
+    _id: string;
     country: string;
     startDate: string;
     endDate: string;
@@ -12,7 +12,7 @@ type TripDetailCardProps = {
     onEdit: () => void;
 }
 
-const TripDetailCard = ({ tripID, country, startDate, endDate, onDelete, onEdit }: TripDetailCardProps) => {
+const TripDetailCard = ({ _id, country, startDate, endDate, onDelete, onEdit }: TripDetailCardProps) => {
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return date.toLocaleDateString();
@@ -22,7 +22,7 @@ const TripDetailCard = ({ tripID, country, startDate, endDate, onDelete, onEdit 
         <div className={styles.container}>
             <div className={styles.card}>
                 <div>
-                    <p className={styles.tripId}>Trip ID: {tripID}</p>
+                    <p className={styles.tripId}>Trip ID: {_id}</p>
                     <h3>Trip to {country}</h3>
                     <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
                 </div>

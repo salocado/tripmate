@@ -5,13 +5,13 @@ import Button from '@/components/Button/Button';
 import Link from 'next/link';
 
 type TripCardProps = {
-    tripID: number;
+    _id: string;
     country: string;
     startDate: string;
     endDate: string;
 }
 
-const TripCard = ({ tripID, country, startDate, endDate }: TripCardProps) => {
+const TripCard = ({ _id, country, startDate, endDate }: TripCardProps) => {
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return date.toLocaleDateString();
@@ -20,10 +20,10 @@ const TripCard = ({ tripID, country, startDate, endDate }: TripCardProps) => {
     return(
         <div className={styles.container}>
             <div className={styles.card}>
-                <p className={styles.tripId}>Trip ID: {tripID}</p>
+                <p className={styles.tripId}>Trip ID: {_id}</p>
                 <h3>Trip to {country}</h3>
                 <p>{formatDate(startDate)} - {formatDate(endDate)}</p>
-                <Link href={`/trips/${tripID}`}>
+                <Link href={`/trips/${_id}`}>
                     <Button>Show Trip</Button>
                 </Link>
             </div>

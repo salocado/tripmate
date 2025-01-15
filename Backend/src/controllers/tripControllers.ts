@@ -1,48 +1,46 @@
 // Author: Salome Schmied
 
+import Trip from '../models/tripModel';
 import { Request, Response } from 'express';
-import { Trip } from '../models/Trip';
-import * as tripService from '../services/tripServices';
 
-export const getTrips = (req: Request, res: Response): void => {
-    const trips: Trip[] = tripService.getTrips();
-    res.json(trips);
-}
-
-export const createTrip = (req: Request, res: Response): void => {
-    const country: string = req.body.country;
-    const startDate: string = req.body.startDate;
-    const endDate: string = req.body.endDate;
-
-    const createdTrip = tripService.createTrip(country, startDate, endDate);
-    if (!createdTrip) {
-        res.status(400).send('Invalid input.');
-    } else {
-        res.status(201).send('Trip added successfully.');
+async function getTrips(req: Request, res: Response): Promise<void> {
+    try {
+        const trips = await Trip.find();
+        res.status(200).json(trips);
+    } catch (error) {
+        res.status(500).json({ message: error });
     }
 }
 
-export const updateTrip = (req: Request, res: Response): void => {
-    const id: number = parseInt(req.params.id);
-    const country: string = req.body.country;
-    const startDate: string = req.body.startDate;
-    const endDate: string = req.body.endDate;
-
-    const updatedTrip = tripService.updateTrip(id, country, startDate, endDate);
-    if (!updatedTrip) {
-        res.status(404).send('Trip not found.');
-    } else {
-        res.status(200).send(`Updated trip with ID ${id}`);
+async function createTrip(req: Request, res: Response): Promise<void> {
+    try {
+        const trip = new Trip(req.body);
+        const result = await trip.save();
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ message: error });
     }
 }
 
-export const deleteTrip = (req: Request, res: Response): void => {
-    const id: number = parseInt(req.params.id);
-
-    const deletedTrip = tripService.deleteTrip(id);
-    if (!deletedTrip) {
-        res.status(404).send('Trip not found.');
-    } else {
-        res.status(200).send(`Deleted trip with ID ${id}`);
+async function updateTrip(req: Request, res: Response): Promise<void> {
+    try {
+        const id = req.params.id;
+        const trip = req.body;
+        const result = await Trip.findByIdAndUpdate(id, trip, { new: true });
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(400).json({ message: error });
     }
 }
+
+async function deleteTrip(req: Request, res: Response): Promise<void> {
+    try {
+        const id = req.params.id;
+        const result = await Trip.findByIdAndDelete(id);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(400).json({ message: error });
+    }
+}
+
+export { getTrips, createTrip, updateTrip, deleteTrip };

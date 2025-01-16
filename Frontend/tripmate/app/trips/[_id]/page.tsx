@@ -14,20 +14,42 @@ const TripDetails = () => {
     const { _id } = useParams();
     const [trip, setTrip] = useState<Trip | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetchTrip(String(_id))
-            .then(response => {
+        const loadTrip = async () => {
+            try {
+                const response = await fetchTrip(String(_id));
                 setTrip(response);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                setError('Failed to load trip.');
-            });
+            } catch (error) {
+                setError('Could not load trip.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        loadTrip();
     }, [_id]);
 
-    if (!trip) {
-        return <p>Loading...</p>;
+    if (isLoading) {
+        return (
+            <div>
+                <NavigationBar />
+                <div className={styles.container}>
+                    <p>Loading...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (error || !trip) {
+        return (
+            <div>
+                <NavigationBar />
+                <div className={styles.container}>
+                    <p>{error}</p>
+                </div>
+            </div>
+        );
     }
 
     const handleDelete = async () => {
@@ -37,8 +59,7 @@ const TripDetails = () => {
                 alert('Trip successfully deleted.');
                 window.location.href = '/trips';
             } catch (error) {
-                console.error('Error deleting trip:', error);
-                alert('Failed to delete trip.');
+                alert('Could not delete trip.');
             }
         }
     };

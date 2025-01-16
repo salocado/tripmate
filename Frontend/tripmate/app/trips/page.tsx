@@ -17,8 +17,8 @@ const Trips = () => {
             .then(response => {setTrips(response);
             })
             .catch(error => {
-                console.error('Error:', error);
-                setError('Failed to load trips.');
+                console.error('Failed to load trips:', error);
+                setError('Could not load trips.');
             });
     }, []);
 

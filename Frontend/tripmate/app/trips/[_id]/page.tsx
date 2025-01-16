@@ -22,7 +22,7 @@ const TripDetails = () => {
                 const response = await fetchTrip(String(_id));
                 setTrip(response);
             } catch (error) {
-                setError('Could not load trip.');
+                setError(`${error}`);
             } finally {
                 setIsLoading(false);
             }
@@ -59,7 +59,7 @@ const TripDetails = () => {
                 alert('Trip successfully deleted.');
                 window.location.href = '/trips';
             } catch (error) {
-                alert('Could not delete trip.');
+                alert(`${error}`);
             }
         }
     };

@@ -45,7 +45,7 @@ const AddTrip = () => {
             window.location.href = '/trips';
         } catch (error) {
             console.error('Failed to save trip:', error);
-            alert('Could not save trip.');
+            alert(`${error}`);
         }
     };
 

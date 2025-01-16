@@ -18,7 +18,7 @@ const Trips = () => {
             })
             .catch(error => {
                 console.error('Failed to load trips:', error);
-                setError('Could not load trips.');
+                setError(`${error}`);
             });
     }, []);
 

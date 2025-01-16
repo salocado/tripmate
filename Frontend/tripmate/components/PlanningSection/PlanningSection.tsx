@@ -31,7 +31,7 @@ const PlanningSection = ({
 
         if (!country) {
             errors.country = 'Country cannot be empty.';
-        } else if (!/^[a-zA-Z]+$/.test(country)) {
+        } else if (!/^[a-zA-Z ]+$/.test(country)) {
             errors.country = 'Countries can only contain letters.';
         }
         if (!startDate) {

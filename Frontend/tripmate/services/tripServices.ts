@@ -25,7 +25,7 @@ export const fetchTrip = async (_id: string): Promise<Trip> => {
         return foundTrip;
     } catch (error) {
         console.error(`Failed to fetch trip:`, error);
-        throw new Error('Could not load trip.');
+        throw error;
     }
 };
 

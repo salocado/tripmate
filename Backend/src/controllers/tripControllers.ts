@@ -27,6 +27,10 @@ async function updateTrip(req: Request, res: Response): Promise<void> {
         const id = req.params.id;
         const trip = req.body;
         const result = await Trip.findByIdAndUpdate(id, trip, { new: true });
+        if (!result) {
+            res.status(404).json({ message: 'Trip not found' });
+            return;
+        }
         res.status(200).json(result);
     } catch (error) {
         res.status(400).json({ message: error });
@@ -37,6 +41,10 @@ async function deleteTrip(req: Request, res: Response): Promise<void> {
     try {
         const id = req.params.id;
         const result = await Trip.findByIdAndDelete(id);
+        if (!result) {
+            res.status(404).json({ message: 'Trip not found' });
+            return;
+        }
         res.status(200).json(result);
     } catch (error) {
         res.status(400).json({ message: error });

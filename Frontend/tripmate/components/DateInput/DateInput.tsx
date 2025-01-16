@@ -14,7 +14,6 @@ const DateInput = ({ id, value, onChange }: DateInputProps) => (
         id={id}
         value={value}
         onChange={onChange}
-        required
         className={styles.input}
     />
 );

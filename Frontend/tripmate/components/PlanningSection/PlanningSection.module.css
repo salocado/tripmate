@@ -31,3 +31,8 @@
     padding: 60px;
     z-index: 1;
 }
+
+.error {
+    color: #00798C;
+    font-size: medium;
+}

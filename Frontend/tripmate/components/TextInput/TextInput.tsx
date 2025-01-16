@@ -13,7 +13,6 @@ const TextInput = ({ type, value, onChange }: DateInputProps) => (
         type={type}
         value={value}
         onChange={onChange}
-        required
         className={styles.input}
     />
 );

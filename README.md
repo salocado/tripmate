@@ -6,7 +6,7 @@ This project requires `.env` files located in the **root** of both the **Backend
 
 ### Backend: .env
 
-Define the backend server port and the connection to MongoDB:
+Define the backend server port and the connection to journeydb database in MongoDB:
 
 ``` plaintext
 PORT=8085

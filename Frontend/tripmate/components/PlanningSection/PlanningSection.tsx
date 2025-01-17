@@ -64,30 +64,36 @@ const PlanningSection = ({
             <form onSubmit={onSubmit} className={styles.form}>
                 <div>
                     <h3>Which country do you want to visit?</h3>
-                    <TextInput
-                        type="text"
-                        value={country}
-                        onChange={(event) => setCountry(event.target.value)}
-                    />
-                    <p className={styles.error}>{errors.country}</p>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <TextInput
+                            type="text"
+                            value={country}
+                            onChange={(event) => setCountry(event.target.value)}
+                        />
+                        <p className={styles.error}>{errors.country}</p>
+                    </div>
                 </div>
                 <div>
                     <h3>When does your trip start?</h3>
-                    <DateInput
-                        id="startDate"
-                        value={startDate}
-                        onChange={(event) => setStartDate(event.target.value)}
-                    />
-                    <p className={styles.error}>{errors.startDate}</p>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <DateInput
+                            id="startDate"
+                            value={startDate}
+                            onChange={(event) => setStartDate(event.target.value)}
+                        />
+                        <p className={styles.error}>{errors.startDate}</p>
+                    </div>
                 </div>
                 <div>
                     <h3>When does your trip end?</h3>
-                    <DateInput
-                        id="endDate"
-                        value={endDate}
-                        onChange={(event) => setEndDate(event.target.value)}
-                    />
-                    <p className={styles.error}>{errors.endDate}</p>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <DateInput
+                            id="endDate"
+                            value={endDate}
+                            onChange={(event) => setEndDate(event.target.value)}
+                        />
+                        <p className={styles.error}>{errors.endDate}</p>
+                    </div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                     <Button type="submit">{buttonLabel}</Button>

@@ -2,7 +2,7 @@
 
 ## Environment Variables
 
-This project requires `.env` files located in the **root** of both the **Backend** and **Frontend** folders.
+This project requires `.env` files located in the **root** of both the **Backend** and **Frontend/readme** folders.
 
 ### Backend: .env
 
@@ -13,9 +13,9 @@ PORT=8085
 MONGO_URI=mongodb+srv://<user>:<password>@cluster0.pphqp.mongodb.net/journeydb?retryWrites=true&w=majority&appName=Cluster0
 ```
 
-### Frontend: .env
+### Frontend/tripmate: .env
 
-Define the backend URL:
+Define NEXT_PUBLIC_BACKEND_URL:
 
 ``` plaintext
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8085

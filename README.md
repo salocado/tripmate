@@ -6,10 +6,11 @@ This project requires `.env` files located in the **root** of both the **Backend
 
 ### Backend: .env
 
-Define the backend server port:
+Define the backend server port and the connection to MongoDB:
 
 ``` plaintext
 PORT=8085
+MONGO_URI=mongodb+srv://<user>:<password>@cluster0.pphqp.mongodb.net/journeydb?retryWrites=true&w=majority&appName=Cluster0
 ```
 
 ### Frontend: .env

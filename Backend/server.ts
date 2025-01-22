@@ -4,7 +4,8 @@ import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import router from './src/routes/tripRoutes';
+import tripRouter from './src/routes/tripRoutes';
+import authRouter from './src/routes/authRoutes';
 
 dotenv.config();
 
@@ -26,4 +27,5 @@ app.use(cors());
 app.use(express.json());
 
 // routes
-app.use('/api/trip', router);
+app.use('/api/trip', tripRouter);
+app.use('/api/auth', authRouter);

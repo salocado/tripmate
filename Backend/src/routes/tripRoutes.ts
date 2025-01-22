@@ -3,11 +3,11 @@
 import { Router } from 'express';
 import { getTrips, createTrip, updateTrip, deleteTrip } from '../controllers/tripControllers';
 
-const router: Router = Router();
+const tripRouter: Router = Router();
 
-router.get('/', getTrips)
+tripRouter.get('/', getTrips)
     .post('/', createTrip)
     .put('/:id', updateTrip)
     .delete('/:id', deleteTrip);
 
-export default router;
+export default tripRouter;

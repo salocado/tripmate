@@ -1,0 +1,13 @@
+/* Author: Salome Schmied */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 300px;
+    text-align: center;
+}

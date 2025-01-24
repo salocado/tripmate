@@ -55,5 +55,5 @@
 }
 
 .image {
-    object-fit: cover; /* Skaliert das Bild passend in den Container */
+    object-fit: cover;
 }

@@ -18,6 +18,7 @@ const NavigationBar = () => (
             <li><Link href='/'>Home</Link></li>
             <li><Link href='/trips'>My Trips</Link></li>
             <li><Link href='/add-trip'>Add Trip</Link></li>
+            <li><Link href='/sign-in'>Sign In</Link></li>
         </ul></h3>
     </nav>
 );

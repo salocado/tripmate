@@ -14,6 +14,7 @@ const PhotoGallery = () => {
                         alt="Photo 1"
                         fill
                         className={styles.image}
+                        sizes="(max-width: 600px)"
                     />
                 </div>
                 <div className={styles.photo2}>
@@ -22,6 +23,7 @@ const PhotoGallery = () => {
                         alt="Photo 2"
                         fill
                         className={styles.image}
+                        sizes="(max-width: 600px)"
                     />
                 </div>
                 <div className={styles.photo3}>
@@ -30,6 +32,7 @@ const PhotoGallery = () => {
                         alt="Photo 3"
                         fill
                         className={styles.image}
+                        sizes="(max-width: 600px)"
                     />
                 </div>
                 <div className={styles.photo4}>
@@ -38,6 +41,7 @@ const PhotoGallery = () => {
                         alt="Photo 4"
                         fill
                         className={styles.image}
+                        sizes="(max-width: 600px)"
                     />
                 </div>
                 <div className={styles.photo5}>
@@ -46,6 +50,7 @@ const PhotoGallery = () => {
                         alt="Photo 5"
                         fill
                         className={styles.image}
+                        sizes="(max-width: 600px)"
                     />
                 </div>
             </div>

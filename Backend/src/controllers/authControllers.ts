@@ -1,6 +1,6 @@
 // Author: Salome Schmied
 
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import { HydratedDocument } from "mongoose";
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
@@ -51,5 +51,26 @@ export const signIn = async (req: Request, res: Response): Promise<void> => {
         res.status(200).json({ token });
     } catch (error) {
         res.status(500).json({ message: error });
+    }
+};
+
+export const verifyToken = (req: Request, res: Response, next: NextFunction): void => {
+    let token: string | undefined;
+
+    if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
+        token = req.headers.authorization.split(" ")[1];
+    }
+
+    if (!token) {
+        res.status(401).json({ message: "Authorization token required." });
+        return;
+    }
+
+    try {
+        const verified = jwt.verify(token, process.env.TOKEN_SECRET || "tokentest");
+        console.log(verified);
+        next();
+    } catch (error) {
+        res.status(400).json({ message: "Invalid token." });
     }
 };

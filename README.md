@@ -6,11 +6,13 @@ This project requires `.env` files located in the **root** of both the **Backend
 
 ### Backend: .env
 
-Define the backend server port and the connection to journeydb database in MongoDB:
+Define the backend server port, the connection to the journeydb database in MongoDB, and JWT configurations:
 
 ``` plaintext
 PORT=8085
 MONGO_URI=mongodb+srv://<user>:<password>@cluster0.pphqp.mongodb.net/journeydb?retryWrites=true&w=majority&appName=Cluster0
+TOKEN_SECRET=tokentest
+JWT_EXPIRES_IN=15m
 ```
 
 ### Frontend/tripmate: .env

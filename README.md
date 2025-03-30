@@ -2,7 +2,13 @@
 
 Tripmate is a full-stack travel planner application focused on usability and modern web technologies. Users can create, manage, and securely access their trips via a simple login system.
 
-## Tech Stack
+### 🌟 Features
+
+- Create, update, view, and delete trips (CRUD)
+- Secure user login with JWT authentication
+- Responsive UI with simple navigation
+
+### 💻 Tech Stack
 
 - **Frontend:** Next.js (React)
 - **Backend:** Express.js with a RESTAPI
@@ -34,6 +40,22 @@ Define NEXT_PUBLIC_BACKEND_URL:
 ``` plaintext
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8085
 ```
+
+## 🚀 Getting Started
+
+### Install dependencies and start development servers
+
+In both the **Backend** and **Frontend/tripmate** folders, run:
+``` plaintext
+npm install
+npm run dev
+```
+
+### Set up MongoDB
+
+Create a free cluster at MongoDB Atlas and replace the placeholder in your MONGO_URI with your credentials.
+Make sure the database name is journeydb or adjust your connection string accordingly.
+
 
 ## 👤 User Sign-up
 

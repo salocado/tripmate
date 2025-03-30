@@ -18,13 +18,20 @@ Tripmate is a full-stack travel planner application focused on usability and mod
 
 ## Environment Variables
 
-This project requires `.env` files located in the **root** of both the **Backend** and **Frontend/tripmate** folders.
+This project requires `.env` files located in the **root** of both the **Frontend/tripmate** and **Backend** folders.
 
 * Ensure both files are in the correct directories.
 * Use the same port in both files for communication.
 * The Frontend runs on its own port (default: 3000).
 
-### 📁 Folder Backend: .env
+**📁 Folder Frontend/tripmate:**
+
+Define NEXT_PUBLIC_BACKEND_URL:
+``` plaintext
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8085
+```
+
+**📁 Folder Backend: .env**
 
 Define the backend server port, the connection to the journeydb database in MongoDB, and JWT configurations:
 ``` plaintext
@@ -34,24 +41,17 @@ TOKEN_SECRET=tokentest
 JWT_EXPIRES_IN=15m
 ```
 
-### 📁 Folder Frontend/tripmate: .env
-
-Define NEXT_PUBLIC_BACKEND_URL:
-``` plaintext
-NEXT_PUBLIC_BACKEND_URL=http://localhost:8085
-```
-
 ## 🚀 Getting Started
 
-### Install dependencies and start development servers
+**Install dependencies and start development servers**
 
-In both the **Backend** and **Frontend/tripmate** folders, run:
+In both the **Frontend/tripmate** and **Backend** folders, run:
 ``` plaintext
 npm install
 npm run dev
 ```
 
-### Set up MongoDB
+**Set up MongoDB**
 
 Create a free cluster at MongoDB Atlas and replace the placeholder in your MONGO_URI with your credentials.
 Make sure the database name is journeydb or adjust your connection string accordingly.
@@ -61,12 +61,12 @@ Make sure the database name is journeydb or adjust your connection string accord
 
 You can create a new user by sending a POST request to the following endpoint:
 
-### Endpoint
+**Endpoint**
 ``` plaintext
 http://localhost:${port}/api/auth/signup
 ```
 
-### Request Body
+**Request Body**
 ``` plaintext
 {
     "name": "John Doe",
